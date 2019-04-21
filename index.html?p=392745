@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://cecieee.org/xmlrpc.php">
+    <title>Devcom: A walk-through &#8211; IEEE CEC</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="IEEE CEC &raquo; Feed" href="https://cecieee.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="IEEE CEC &raquo; Comments Feed" href="https://cecieee.org/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="IEEE CEC &raquo; Devcom: A walk-through Comments Feed" href="https://cecieee.org/devcom-walk-through/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.5.1 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.5.1';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-39379599-7';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-39379599-7', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('require', 'linkid', 'linkid.js');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://cecieee.org/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='stm-stm-css'  href='https://cecieee.org/wp-content/cache/busting/1/wp-content-uploads-stm_fonts-stm-stm-1.0.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wpfront-notification-bar-css'  href='https://cecieee.org/wp-content/cache/busting/1/wp-content-plugins-wpfront-notification-bar-css-wpfront-notification-bar-1.7.1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://cecieee.org/wp-content/cache/busting/1/wp-content-themes-consulting-assets-css-bootstrap.min-3.7.9.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://cecieee.org/wp-content/cache/busting/1/wp-content-themes-consulting-assets-css-font-awesome.min-3.7.9.css' type='text/css' media='all' />
+<link rel='stylesheet' id='consulting-style-css'  href='https://cecieee.org/wp-content/cache/busting/1/wp-content-themes-consulting-style-3.7.9.css' type='text/css' media='all' />
+<link rel='stylesheet' id='consulting-layout-css'  href='https://cecieee.org/wp-content/cache/busting/1/wp-content-themes-consulting-assets-css-layout_1-main-3.7.9.css' type='text/css' media='all' />
+<style id='consulting-layout-inline-css' type='text/css'>
+.page_title{ background-repeat: no-repeat !important; }body.header_style_2 .header_top{ background:#ffffff; } .top_bar,.info_box.style_3 .info_box_text{ background: #00629B; } h2,h1,h3{ text-transform:capitalize!important; } @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi){ .logo img { width: 220px!important; } } .staff_info p, .staff_info a.read_more { display: none; } .page_title{ color:white!important; background:#00629b!important; }
+</style>
+<link rel='stylesheet' id='select2-css'  href='https://cecieee.org/wp-content/cache/busting/1/wp-content-themes-consulting-assets-css-select2.min-3.7.9.css' type='text/css' media='all' />
+<link rel='stylesheet' id='consulting-default-font-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C300italic%2C400italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%26subset%3Dlatin%2Cgreek%2Cgreek-ext%2Cvietnamese%2Ccyrillic-ext%2Clatin-ext%2Ccyrillic%7CPoppins%3A400%2C500%2C300%2C600%2C700%26subset%3Dlatin%2Clatin-ext%2Cdevanagari&#038;ver=3.7.9' type='text/css' media='all' />
+<link rel='stylesheet' id='stm_megamenu-css'  href='https://cecieee.org/wp-content/themes/consulting/inc/megamenu/assets/css/megamenu.css' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/cecieee.org","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cecieee.org/wp-content/cache/busting/1/wp-content-plugins-google-analytics-for-wordpress-assets-js-frontend.min-7.5.1.js'></script>
+<script type='text/javascript' src='https://cecieee.org/wp-content/cache/busting/1/wp-includes-js-jquery-jquery-1.12.4.js'></script>
+<script type='text/javascript' src='https://cecieee.org/wp-content/cache/busting/1/wp-includes-js-jquery-jquery-migrate.min-1.4.1.js'></script>
+<script type='text/javascript' src='https://cecieee.org/wp-content/cache/busting/1/wp-content-plugins-wpfront-notification-bar-js-wpfront-notification-bar-1.7.1.js'></script>
+<script type='text/javascript' src='https://cecieee.org/wp-content/themes/consulting/inc/megamenu/assets/js/megamenu.js'></script>
+<link rel='https://api.w.org/' href='https://cecieee.org/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cecieee.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://cecieee.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Awarded 3rd Place for the Best PES Student Branch' href='https://cecieee.org/awarded-3rd-place-for-the-best-pes-student-branch/' />
+<link rel='next' title='IEEE Kochi Hub Computer Society Coordinator.' href='https://cecieee.org/kochi-hub-computer-society-coordinator/' />
+<meta name="generator" content="WordPress 5.1.1" />
+<link rel="canonical" href="https://cecieee.org/devcom-walk-through/" />
+<link rel='shortlink' href='https://cecieee.org/?p=392745' />
+		<script type="text/javascript">
+			var ajaxurl = 'https://cecieee.org/wp-admin/admin-ajax.php';
+		</script>
+		<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://cecieee.org/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><link rel="icon" href="https://cecieee.org/wp-content/uploads/2018/12/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://cecieee.org/wp-content/uploads/2018/12/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://cecieee.org/wp-content/uploads/2018/12/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://cecieee.org/wp-content/uploads/2018/12/cropped-favicon-270x270.png" />
+<style type="text/css" title="dynamic-css" class="options-output">.top_nav_wr .top_nav .logo a img{width:300px;}h1, .h1{text-transform:capitalize;}h2, .h2{text-transform:capitalize;}h3, .h3{text-transform:capitalize;}</style>
+<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><script data-no-minify="1" data-cfasync="false">(function(w,d){function a(){var b=d.createElement("script");b.async=!0;b.src="https://cecieee.org/wp-content/plugins/wp-rocket/inc/front/js/lazyload.1.0.5.min.js";var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)}w.attachEvent?w.attachEvent("onload",a):w.addEventListener("load",a,!1)})(window,document);</script></head>
+<body data-rsssl=1 class="post-template-default single single-post postid-392745 single-format-standard site_layout_1  header_style_2 wpb-js-composer js-comp-ver-5.3 vc_responsive">
+<div id="wrapper">
+<div id="fullpage" class="content_wrapper">
+<header id="header">
+                <div class="header_top clearfix">
+            <div class="container">
+                <div class="logo media-left media-middle">
+                                            <a href="https://cecieee.org/"><img src="https://cecieee.org/wp-content/uploads/2017/10/IEEE-SB-logo-blue.png" style="width: 300px; height: px;" alt="IEEE CEC" /></a>
+                                    </div>
+                <div class="top_nav media-body media-middle">
+                                                                                    <div class="top_nav_wrapper clearfix">
+                        <ul id="menu-main-menu" class="main_menu_nav"><li id="menu-item-391909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-391909"><a href="https://cecieee.org/">Home</a></li>
+<li id="menu-item-392230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-392230"><a href="https://cecieee.org/about-us/">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-393272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393272"><a href="https://cecieee.org/about-us/excom-2019/">ExCom 2019</a></li>
+	<li id="menu-item-392725" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392725 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/about-us/excom-2018/">ExCom 2018</a></li>
+	<li id="menu-item-392466" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392466 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/about-us/excom-2017/">ExCom 2017</a></li>
+	<li id="menu-item-392813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392813 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/timeline/">Timeline</a></li>
+</ul>
+</li>
+<li id="menu-item-1541" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1541"><a>Chapters</a>
+<ul class="sub-menu">
+	<li id="menu-item-392112" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-392112 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/computer-society/">Computer Society</a></li>
+	<li id="menu-item-392113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-392113 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/robotics-and-automation-society/">Robotics and Automation Society</a></li>
+	<li id="menu-item-392114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-392114 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/power-and-energy-society/">Power and Energy Society</a></li>
+	<li id="menu-item-392115" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-392115 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/instrumentation-and-measurement-soceity/">Instrumentation and Measurement Society</a></li>
+	<li id="menu-item-392611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392611 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/solid-state-circuit-society/">Solid State Circuit Society</a></li>
+	<li id="menu-item-392853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392853 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/industry-applications-society/">Industry Applications Society</a></li>
+	<li id="menu-item-392116" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-392116 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/ieee-sight/">IEEE SIGHT</a></li>
+	<li id="menu-item-392117" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-392117 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/women-in-engineering/">WIE</a></li>
+</ul>
+</li>
+<li id="menu-item-392540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392540"><a href="https://cecieee.org/event-list/">Events</a></li>
+<li id="menu-item-392253" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-392253"><a href="https://cecieee.org/news/">News</a></li>
+<li id="menu-item-393316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393316"><a href="https://cecieee.org/constitution/">Constitution</a></li>
+<li id="menu-item-391677" class="joinButton menu-item menu-item-type-custom menu-item-object-custom menu-item-391677"><a href="https://www.ieee.org/membership_services/membership/join/index.html">Join IEEE</a></li>
+</ul>                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="mobile_header">
+        <div class="logo_wrapper clearfix">
+            <div class="logo">
+                                    <a href="https://cecieee.org/"><img src="https://cecieee.org/wp-content/uploads/2017/10/IEEE-SB-logo-blue.png" style="width: 300px; height: px;" alt="IEEE CEC" /></a>
+                            </div>
+            <div id="menu_toggle">
+                <button></button>
+            </div>
+        </div>
+        <div class="header_info">
+            <div class="top_nav_mobile">
+                <ul id="menu-main-menu-1" class="main_menu_nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-391909"><a href="https://cecieee.org/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-392230"><a href="https://cecieee.org/about-us/">About Us</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393272"><a href="https://cecieee.org/about-us/excom-2019/">ExCom 2019</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392725 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/about-us/excom-2018/">ExCom 2018</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392466 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/about-us/excom-2017/">ExCom 2017</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392813 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/timeline/">Timeline</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1541"><a>Chapters</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-392112 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/computer-society/">Computer Society</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-392113 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/robotics-and-automation-society/">Robotics and Automation Society</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-392114 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/power-and-energy-society/">Power and Energy Society</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-392115 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/instrumentation-and-measurement-soceity/">Instrumentation and Measurement Society</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392611 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/solid-state-circuit-society/">Solid State Circuit Society</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392853 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/industry-applications-society/">Industry Applications Society</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-392116 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/ieee-sight/">IEEE SIGHT</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-392117 stm_col_width_default stm_mega_cols_inside_default"><a href="https://cecieee.org/women-in-engineering/">WIE</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392540"><a href="https://cecieee.org/event-list/">Events</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-392253"><a href="https://cecieee.org/news/">News</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393316"><a href="https://cecieee.org/constitution/">Constitution</a></li>
+<li class="joinButton menu-item menu-item-type-custom menu-item-object-custom menu-item-391677"><a href="https://www.ieee.org/membership_services/membership/join/index.html">Join IEEE</a></li>
+</ul>            </div>
+                    </div>
+    </div>
+</header>
+<div id="main" >
+    	<div class="page_title">
+					<div class="container">
+				            <div class="breadcrumbs">
+                <!-- Breadcrumb NavXT 6.2.1 -->
+<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to IEEE CEC." href="https://cecieee.org" class="home">Home</a></span><span><i class="fa fa-angle-right"></i></span><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to News." href="https://cecieee.org/news/" class="post-root post post-post"><span property="name">News</span></a><meta property="position" content="2"></span><span><i class="fa fa-angle-right"></i></span><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Computer Society category archives." href="https://cecieee.org/category/cs/" class="taxonomy category"><span property="name">Computer Society</span></a><meta property="position" content="3"></span><span><i class="fa fa-angle-right"></i></span><span property="itemListElement" typeof="ListItem"><span property="name">Devcom: A walk-through</span><meta property="position" content="4"></span>            </div>
+        															<h1 class="h2">Devcom: A walk-through</h1>
+												</div>
+			</div>
+    <div class="container">
+
+<div class="content-area">
+
+	<article id="post-392745" class="post-392745 post type-post status-publish format-standard has-post-thumbnail hentry category-cs">
+	<div class="entry-content">
+		                                            <div class="row"><div class="col-lg-9 col-md-9 col-sm-12 col-xs-12"><div class="col_in __padd-right">                <div class="without_vc">
+                                        <div class="post_details_wr">
+                        <div class="stm_post_info">
+	<div class="stm_post_details clearfix">
+		<ul class="clearfix">
+			<li class="post_date">
+				<i class="fa fa fa-clock-o"></i>
+				March 7, 2018			</li>
+			<li class="post_by">Posted by:				<span>Webmaster</span>
+			</li>
+			<li class="post_cat">Category:				<span>Computer Society</span>
+			</li>
+		</ul>
+		<div class="comments_num">
+			<a href="https://cecieee.org/devcom-walk-through/#respond"><i class="fa fa-comment-o"></i>No Comments </a>
+		</div>
+	</div>
+			<div class="post_thumbnail">
+			<img width="960" height="550" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://cecieee.org/wp-content/uploads/2018/03/devcom_family-960x550.jpg" class="attachment-consulting-image-1110x550-croped size-consulting-image-1110x550-croped wp-post-image" alt="devcom_family" /><noscript><img width="960" height="550" src="https://cecieee.org/wp-content/uploads/2018/03/devcom_family-960x550.jpg" class="attachment-consulting-image-1110x550-croped size-consulting-image-1110x550-croped wp-post-image" alt="devcom_family" /></noscript>		</div>
+	</div>                    </div>
+                    <div class="wpb_text_column">
+                        <h2>Devcom (Developer Community)</h2>
+<p>Too often, students will race through their secondary school years, compiling tallies of courses and credits acquired, joining activities to lengthen their resume, taking and retaking entrance tests. These same students arrive at college only to repeat this process with a goal of admission to graduate and professional schools or to land that perfect first job. We live in a goal-focused society in which becoming a mindful, lifelong learner instead of an educational trophy hunter is not an easily achievable state of mind.</p>
+<p>These are the revelations which led to the formation of Devcom at College of Engineering Chengannur. It was created by a group of tech-savvy students with the sole intention of developing and fostering technical expertise to students by providing them with a platform to acquire the much needed technical skills in today’s times.</p>
+<p>Devcom or Developer Community is a student-computer-enthusiasts community founded to encourage technical skill sharing and community learning among the student members of IEEE Student Branch College of Engineering Chengannur. It selects certain creative, skilled and interested students into the community encourages them to attend events, attend sessions, learn and to finally contribute to the society.</p>
+<p>Give it a read at:<br />
+<a href="http://interface.computer.org/the-computer-society-college-of-engineering-chengannur-student-branch-chapter-c/" target="_blank" rel="noopener nofollow" data-ft="{&quot;tn&quot;:&quot;-U&quot;}" data-lynx-mode="asynclazy" data-lynx-uri="https://l.facebook.com/l.php?u=http%3A%2F%2Finterface.computer.org%2Fthe-computer-society-college-of-engineering-chengannur-student-branch-chapter-c%2F&amp;h=ATNXl24hhN6eM_pJu5kFyz4_x_U-g9-zJ7v1Jfx_KGpIQKrtmT2pBppRNebPAf_jB9SLooENMjfz4VtuNPfPYq0sanm9MyG-pKtNRWsspXdX0EDMSTjqq7RzWK55gg">http://interface.computer.org/the-computer-society-college…/</a></p>
+<h3>Who we are</h3>
+<p>Devcom started off as a group of 4 students now it’s a family of over 80 members. We are a community of students who yearn to elevate all students technologically. We have a peer to peer learning system where each member of the community shares the content he knows and so on. We also have Mentored in the community who can help with the members at any time. Over the past 1 year, we have conducted over 20 sessions. After each session, we conduct a survey monitoring the requirements of the members and reviewing our performance. The number of projects developed is constantly increasing in the college because the students are no longer afraid to try. We at Devcom believe that when students are empowered with the technology they can unleash their creativity and build whatever they want.<br />
+“The best way to create value in the 21st century is to connect Creativity with Technology.” — Steve Jobs</p>
+<p>&nbsp;</p>
+<h3>How it all began</h3>
+<p>The Devcom concept was initialized in 2013 by the Chairman of IEEE CS (2013) and Richard E Merwin scholar     Mr. Shahul Hameed. The first coordinator of devcom was Mr. Jayadev R followed by Ashish Muralidharan (Chairman of IEEE CS CEC 2015), Susmitha M (Upsilon Pi Epsilon Scholar, Secretary IEEE CS CEC 2016) and Ms. Lintu Oommen (Chairperson IEEE CS CEC, 2016). It kept on being a project completion life cycle till 2016 when Sooraj P R (Chairman IEEE CS CEC) took up the mantle of the community as Team Lead with Megha Nair as coordinator. He began training 4 students by September 2016 which grew to 11 people. With those volunteers, he conducted the Hall of code with assistance from Vignesh Hari. Then the community kept on organizing sessions and workshops. Slowly, the community grew from a mere 4 members to now 85 recorded members in a period of the 1-year span which is a very quick appreciable progress.<br />
+“A leader has the vision and conviction that a dream can be achieved. He inspires the power and energy to get it done.”</p>
+<p>Sooraj P. R is undoubtedly the heart and soul of the community, popularly known as “Aashan”( A Malayalam word for teacher) among the team. Also for its success, Mr. Vignesh Hari (REM Scholar &amp; current Vice Chairman at the IEEE SB in our college) is to be commended for helping the community by being the technical backbone of this family.<br />
+Once the team was formed there were many who were interested to join but were shortlisted based on their abstract ideas but made sure that not a single enthusiastic mind is left out. Once this stage was completed Devcom was on the full swing, from fortnight sessions and tasks, it accelerated to weekly sessions and all these sessions were handled by one or two among the team itself. Once a session is completed, there would be individual or group tasks that are to be completed based on the knowledge gained and many projects were completed.<br />
+Currently, the third batch of Devcom has started with 12 members and weekly sessions are organized in the room with the facilities provided and we celebrate every third week of October as the “Devcom Week ”. Also Devcom Creative, an initiative that focuses on the designing and creative areas rather than coding and developing was started and has been receiving tremendous support from the students.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>What we have overcome</h3>
+<p>Devcom is led by a huge pack of enthusiastic students striving to get through the chaos. Being prudent enough is not the only ingredient to transform your plans into live actions. It may not be true to say that there is always a way when you have the will. It’s easy to make plans but it may not be that easy to make them come true.<br />
+So guess what it would be when you have to cancel your plans just because you don’t have a proper net connectivity or a projector or enough laptops. Sounds simple, huh? Maybe…but it’s not easy as it seems to be to deal with it especially when you are running out of time.</p>
+<p><strong>The first problem: People</strong><br />
+The first building blocks while fabricating a community is to gather the people who believe in the community and for each of them to be active. Devcom started off with just 4 members and it made its foundation by giving a quality experience to those initial members. Through them by word of mouth people began to join the community. Through quality experience and benefits, these people became part of our family.</p>
+<p><strong>The second problem: Space</strong><br />
+Initially, the meetings (4-5 members) were conducted at college corridors and classrooms. Then as the members increased and the session idea was introduced by the team lead, we shifted to the IEEE Centre of Excellence. The problem we faced then was that the meetings of each IEEE society clashed with Devcom’s sessions and events but even so we had to depend on that since we were at a disadvantage. Dr. Smitha Dharan (HOD, Computer Science) came to know of our efforts and granted us a room (Room no: 420) for our utilization week long. Then the activities increased spontaneously and we were growing as such.</p>
+<p><strong>The third problem: Resources</strong><br />
+As we decided to increase the efforts of the community through constant and regular sessions, we were at a disadvantage: for each session, we needed internet connectivity and projector. And for each time the permission had to be taken followed by a tiresome set of procedures. But it was then the Dr. Smitha Dharan (HOD Computer Science Department) recognized our efforts gave us the permission to take the necessary resources when needed.</p>
+<p><strong>The final problem: Skill and Expertise</strong><br />
+As devcom was proposed being a technical community of technically abled students, but in reality when it began only a handful of members filled that criteria? How we overcame this is the secret of success of Devcom and why its family or community is strong.<br />
+“What we didn’t have, we built”<br />
+Yes, the members were encouraged to take up sessions on relevant topics which they haven’t experienced, so for taking the session, they had to study in detail. the members were given free online courses, projects, and textbooks. Slowly they became the experts the community lacked.</p>
+<p>&nbsp;</p>
+<h3>What we have done</h3>
+<p>“Sprinkle of confidence, a cup of tenacity mixed well with the community” – this was the secret recipe of the Developer Community when it was introduced in our college. Our main aim was to bring more students into the community-based activities and let them know how important peer learning is. Sessions are conducted every week to make this learning a consistent process and as part of the same, we’ve introduced two main initiatives: Weeks and Guilds.<br />
+Devcom Team Lead Mr. Sooraj P R took the decision to devote a complete week for each topic and sessions or discussions based on it will be conducted throughout the week. Weeks’17 program focuses on selecting and coordinating the events of a week on a specific topic and is aimed to build a base of knowledge about that topic in the students.<br />
+Guilds were formed to conduct events of each week. Devcom members were divided into seven guilds and each guild was assigned to a particular topic. The guild takes the complete responsibility of the week from organizing the event to submitting its report and as such Devcom emphasizes on the technical and managerial development of its members through this venture.<br />
+Till now we have completed over 20 sessions and has completed over 50 projects (Software, Design &amp; Video).</p>
+<blockquote><p>“I have traveled across college campuses in India and interacted with students as part of Startup Village Collective. Once in a while, I come across rare students who are both developers and community builders. The Devcom community at College of Engineering Chengannur and its Team Lead Sooraj have done exceptional professional work and has impressed me with both passion and execution; rare qualities that come even rarer together in today’s world”</p>
+<p style="text-align: right;">– Mr.Sanjay Vijayakumar<br />
+Chairman<br />
+Startup Village Collective (SV.CO)</p>
+</blockquote>
+<p><a href="https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince-.jpg"><img class="alignnone wp-image-392741 size-full" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince-.jpg" data-lazy-sizes="(max-width: 380px) 25vw,(max-width: 500px) 32.8947368421vw,(max-width: 660px) 43.4210526316vw,(max-width: 800px) 52.6315789474vw,1520px" data-lazy-srcset="https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--50x50@2x.jpg 100w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--150x150@2x.jpg 300w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--380x253.jpg 380w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--500x333.jpg 500w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--255x182@2x.jpg 510w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--350x195@2x.jpg 585w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--300x200@2x.jpg 600w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--350x204@2x.jpg 612w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--320x320@2x.jpg 640w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--660x440.jpg 660w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--350x250@2x.jpg 700w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--380x253@2x.jpg 760w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--768x512.jpg 768w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--800x533.jpg 800w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--500x333@2x.jpg 1000w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--1024x682.jpg 1024w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--660x440@2x.jpg 1320w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince-.jpg 1520w" alt="Participant experiencing VR at Hall Of Code organised by Devcom as a part of MAGNUM 2018" width="1520" height="1013" /><noscript><img class="alignnone wp-image-392741 size-full" src="https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince-.jpg" sizes="(max-width: 380px) 25vw,(max-width: 500px) 32.8947368421vw,(max-width: 660px) 43.4210526316vw,(max-width: 800px) 52.6315789474vw,1520px" srcset="https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--50x50@2x.jpg 100w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--150x150@2x.jpg 300w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--380x253.jpg 380w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--500x333.jpg 500w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--255x182@2x.jpg 510w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--350x195@2x.jpg 585w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--300x200@2x.jpg 600w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--350x204@2x.jpg 612w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--320x320@2x.jpg 640w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--660x440.jpg 660w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--350x250@2x.jpg 700w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--380x253@2x.jpg 760w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--768x512.jpg 768w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--800x533.jpg 800w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--500x333@2x.jpg 1000w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--1024x682.jpg 1024w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince--660x440@2x.jpg 1320w, https://cecieee.org/wp-content/uploads/2018/03/Hall-of-code-VR-experince-.jpg 1520w" alt="Participant experiencing VR at Hall Of Code organised by Devcom as a part of MAGNUM 2018" width="1520" height="1013" /></noscript></a></p>
+<p>Participant experiencing VR at Hall Of Code organized by Devcom as a part of MAGNUM 2018</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Our family</h3>
+<p>Our family is not connected by blood, but by energy and essence. Every organization will have a backbone from whom the idea is born. As such our family had its stepping stone from Sooraj P R, who works each day to make our family’s bond stronger and widen its reach. The unique quality of our family is that it’s always ready to serve our members with innovative ideas and support.</p>
+<p>Most people don’t see themselves as able to change anything. Before we get people working together, we help them make contact with and begin to trust one another.As we could see always a family will have a hierarchy but our family never had one.There are no serious divisions in our community. For anything to be successful, first there should be an understanding between its members and a courage to help them in needs. We convince people that they can make a difference and get them to work together in thinking out what they can do, and then do it.</p>
+<p>The relationship we have with our family is so strong that we were able to complete many projects which inspired more members to join our family.We understand the importance of a family when we are in trouble. Similarly, the troubles we face in our college is mainly regarding internships and doing projects. Usually, it’s our family members who always help us overcome it. Fear is something which holds us from doing things. Fear to stand before the public is the main problem each of us face but here we are provided with an opportunity to come out of it with the weekly sessions. The weekly sessions are the best live place where we interact and share our thoughts.</p>
+<p>Devcom provides technical support by connecting its young developers with mentors, members who are experienced and more knowledgeable in the specified area are usually mentors. Everyone at Devcom always made sure that our members explore more and make a mark in all technical activities with participation and implementing their innovations. We get to know about more opportunities and internships through Devcom. Our family nurtures the confidence and leadership qualities of all our developers. The community triggered the rise of new startups and forums in our college.</p>
+<p>Devcom not only helps students in their extracurricular development but also in their academics by sharing resources and clearing doubts. The most important thing is that Devcom is open for all. Everyone is ready to help anyone who aspires to become a developer even if they are not a member of the community.</p>
+<p>&nbsp;</p>
+<h3>IMPACT</h3>
+<p>● Recognized by Startup Village Collective (SV.CO) as one one of the vibrant and active developer community in     Kerala. They have provided further support for the developers of DEVCOM through their product school initiative.<br />
+● Enhanced and fostered peer to peer learning.<br />
+● Focuses on the overall technical development of the members.<br />
+● Members are getting opportunities to actively volunteer for technical organizations like GDG, Mozilla group,     ICFOSS, Google DSC etc. and are able to connect effectively with the professionals.<br />
+● Introduced them to the never-ending opportunities in the field and encouraged them to take up online courses in Udemy, Coursera etc and had provided redeemable coupons for free courses.<br />
+● Gave them the confidence to start exploring new things and to try them out from making a simple web page to complex applications.</p>
+<p>&nbsp;</p>
+<blockquote><p> “Devcom introduced me to the field of coding and helped me learn web development and start a service company of my own from the experiences which is my major source of income. Also, I interned for 3 companies with the guidance and mentorship obtained from Devcom”</p>
+<p style="text-align: right;">―Sharad Joe<br />
+(Mozilla Club Captain, Founder Rias Tech, Technical Coordinator FOCES)</p>
+</blockquote>
+<blockquote><p>&nbsp;</p>
+<p>“Devcom weeks has given me an overview of the various new technologies that I wouldn’t have known otherwise.It taught me how to organize events and deliver tech talks apart from managing my website codegena.com. Also, I own a YouTube channel with 7k viewers both of them providing financial back up which wouldn’t have happened without Devcom”</p>
+<p style="text-align: right;">―Shan Eapen Koshy<br />
+(Technical Blogger, Webmaster IEEE Student Branch CEC)</p>
+<p>&nbsp;</p></blockquote>
+<blockquote><p>“I’m extremely happy to be a part of the initial batch of Devcom started under the guidance of Mr. Sooraj. Devcom has greatly influenced me in improvising my team and event management skills. I was only a beginner in coding before college, but the exposure and training that Devcom provided have enhanced my technical skills. Devcom has turned out to be an inevitable part of my college life without which I wouldn’t have become the present self.”</p>
+<p style="text-align: right;">-Georgy Jose<br />
+(Coordinator Devcom)</p>
+<p>&nbsp;</p></blockquote>
+<blockquote><p>“It is through Devcom that I learned to organize and manage events efficiently. Moreover, I got to know about the summer internship at ICFOSS and many other opportunities that have played an inevitable role in my learning odyssey from other members of my Devcom family. It’s my immense pleasure and pride to say that I’m a part of this family that has shaped the present me. And to be honest a big thanks to our Aashan Mr. Sooraj for his commitment and dedication.<br />
+#aashan_ishtam”</p>
+<p style="text-align: right;">―Amalu Susan Santhosh<br />
+(Student Ambassador at ICFOSS, Support Team Lead Womendevs)</p>
+<p>&nbsp;</p></blockquote>
+<blockquote><p>“I entered into the field of Coding through Web development sessions by Devcom and building a website of my own &amp; hosting it on Github. The sessions gave me the basic ideas of Git &amp; other version controlling systems and also introduced me to the field of Android app development through Android Studio, which in turn helped me to distribute apps for Technobrightz startup. It also supported me with my project which gained me an internship with ICFOSS.”</p>
+<p style="text-align: right;">―Suvin S Nair<br />
+(Student Ambassador at ICFOSS, Student coordinator FOSS Cell CEC)</p>
+<p>&nbsp;</p></blockquote>
+<blockquote><p>“Devcom introduced me to the developer world. It nurtured me from a shy and doubtful girl to a confident developer. The weekly sessions introduced me to a whole new set of technologies and I was able to apply some of them in my projects. Devcom taught me to organise sessions. We were able to start a new forum at our college because of devcom. I’m very happy to say that every member at Devcom always supported me and inspired me to do more, especially our Team Lead Mr Sooraj. It’s only because of his endless support that we’ve become what we are now.”</p>
+<p style="text-align: right;">―Lida Susan Sabu<br />
+(Student Ambassador at ICFOSS, Coordinator Women Hackers CEC)</p>
+<p>&nbsp;</p></blockquote>
+<p>&nbsp;</p>
+<h2>The future</h2>
+<p>&nbsp;</p>
+<p>Universities continue to dwell on the theoretical in favor of the practical, and it doesn’t bode well for results-driven industries. The solution to the problem is not in cutting out the college experience but complementing it. This means supplementing the university experience with bolstering in-class experiences and courses that are relevant to students long-term career goals.</p>
+<p>Our vision is to build a community around it. To learn, teach and volunteer. We wish to continue our vision by conducting massive outreach programs which can make sure that every aspiring young developer who hasn’t got the chance to program even a single line gets the right opportunities. We believe in Making the world a better place by raising the quality of developers around us. In the future, we want to scale all over the globe and help every possible student developer we can.</p>
+<p><strong>To give technical exposure about all trending fields to the young developers:</strong> What would it be for a young aspiring student who is ignorant of the trending fields in the industry? To keep pace with the ever-growing field he must be well versed and keep himself updated. For those who strive to master in the field, the community would always be a companion to get him through the chaotic environment. It can’t be better anymore when you have a pack of passionate students around<br />
+you who are as determined as you are to venture the horizons. In the coming years, Devcom wishes to increase its presence in the society with massive outreach programs to give technical exposure to the young developers.</p>
+<p><strong>To give a kickstart to those who never coded a single line in their whole life:</strong><br />
+There are a lot of students out there who hesitate to give it a try, may be of enough calibre but haven’t even explored themselves. They find it difficult to get things started, looking down on themselves, with an excuse that they never coded before. What would be better than to find them to convince them and make them believe in themselves. Students tend to stop their ideas from coming into reality just because of the fact that they don’t code.Making a simple project like a webpage can easily boost the confidence of a student and they can move forward on the developing field scale.</p>
+<p><strong>To raise the quality developers for the next generation:</strong><br />
+Studies say that more than 90 percent of engineers in India are unfit for software development. This figure is more likely to increase in the coming years unless we do something to make a difference. Its high time to come out of the conventional ways where more emphasis is on grades and not on grade. The community would endeavor to provide a platform to build quality engineers in the future.</p>
+<p><strong>Projects:</strong><br />
+The members will always be motivated to take up challenging and interesting projects that matter. The projects will be uploaded to <a href="https://github.com/cecdevcom">https://github.com/cecdevcom</a> which is the GitHub repository for Devcom. Other students will also be able to submit their completed and documented projects for which we will provide certificates.</p>
+<p><strong>Internships:</strong><br />
+Based on the projects and other creative or managerial work that the members have done in the community, the Internship cell will find golden opportunities for the students. Many of the present members have received such opportunities.</p>
+<p><strong>Website:</strong><br />
+The Devcom website is under construction. It will enable other Student Branches or Student Chapters to follow our model to develop a community. This will provide personal technical blogging capability to each member and project exploration and collaboration. It will foster each individual’s technical knowledge and capability to the peak.<br />
+Keep a watch at <a href="http://www.devcom.xyz/">http://www.devcom.xyz</a></p>
+<p><strong>Devhack:</strong><br />
+A hackathon to invite developers to the idea of a community will be organized by the Chapter in the coming months.<br />
+Keep track of updates at: <a href="http://www.devhack.devcom.xyz/">http://www.devhack.devcom.xyz</a></p>
+<p>&nbsp;</p>
+<h3>Why Every Student Branch Needs a Devcom</h3>
+<p>Devcom in CEC was initially built to help students technically but it has evolved into much more. With Devcom we were able to remove all constraints of a student and unleash their talents. In Devcom, every member is seen as a developer regardless of their gender, age, branch or batch. In this manner, students were able to effectively communicate and interact which has enhanced their confidence and team skills. We at Devcom believe that an issue can be resolved only when everyone come together as a team and work together as a family.<br />
+Introducing a Community like Devcom can help students to rise up and reach their potential. The core concept of Devcom was not just to teach technical skills to students but also induce a culture in them, to teach them the value of teamwork and collaboration. This initiative’s strength lies in its network and introducing Devcom in each Student branch can increase and strengthen that network.</p>
+<blockquote><p>“Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results.”</p>
+<p style="text-align: right;">― Andrew Carnegie</p>
+</blockquote>
+<p>● The community exhibited sustainability and collaboration in the following manners:</p>
+<p>● No money is spent to conduct sessions as the members are the ones who organize and lead the classes.<br />
+● The event organization is sustainable and active for instance, under the ‘weeks’ initiative, weekly a certain topic is learned and taught from beginner to expert level.<br />
+● Moreover, to make this community more organizational and structured, students are taking sessions every week, multiple times and is nurturing the culture of peer learning.<br />
+● Availability of internet connectivity 24/7 aids the students to utilize it for their needs to boost their learning odyssey.<br />
+● Devcom can be approached by other IEEE societies and organizations, for example, designing and web development for IEEE events of the college.It will become the answer to technical services and volunteers.<br />
+● All the technical activities conducted in the college are in collaboration with Devcom where the students consider this as a platform for self-assessment and growth.<br />
+● The founders and other alumni of the college will have a keen interest in conducting workshops and technical sessions for the community members.</p>
+<p>For help or guidance in forming Devcom, contact at: soorajparakkattil@ieee.org</p>
+<p><a href="https://cecieee.org/wp-content/uploads/2018/03/devcom_family.jpg"><img class="wp-image-392747 size-full" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://cecieee.org/wp-content/uploads/2018/03/devcom_family.jpg" alt="devcom_family" width="960" height="640" data-lazy-srcset="https://cecieee.org/wp-content/uploads/2018/03/devcom_family-50x50@2x.jpg 100w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-150x150@2x.jpg 300w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-380x253.jpg 380w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-500x333.jpg 500w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-255x182@2x.jpg 510w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-350x195@2x.jpg 585w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-300x200@2x.jpg 600w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-350x204@2x.jpg 612w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-320x320@2x.jpg 640w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-660x440.jpg 660w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-350x250@2x.jpg 700w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-380x253@2x.jpg 760w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-768x512.jpg 768w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-800x533.jpg 800w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family.jpg 960w" data-lazy-sizes="(max-width: 380px) 39.583333333333vw,(max-width: 500px) 52.083333333333vw,(max-width: 660px) 68.75vw,(max-width: 800px) 83.333333333333vw,960px" /><noscript><img class="wp-image-392747 size-full" src="https://cecieee.org/wp-content/uploads/2018/03/devcom_family.jpg" alt="devcom_family" width="960" height="640" srcset="https://cecieee.org/wp-content/uploads/2018/03/devcom_family-50x50@2x.jpg 100w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-150x150@2x.jpg 300w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-380x253.jpg 380w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-500x333.jpg 500w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-255x182@2x.jpg 510w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-350x195@2x.jpg 585w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-300x200@2x.jpg 600w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-350x204@2x.jpg 612w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-320x320@2x.jpg 640w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-660x440.jpg 660w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-350x250@2x.jpg 700w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-380x253@2x.jpg 760w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-768x512.jpg 768w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family-800x533.jpg 800w, https://cecieee.org/wp-content/uploads/2018/03/devcom_family.jpg 960w" sizes="(max-width: 380px) 39.583333333333vw,(max-width: 500px) 52.083333333333vw,(max-width: 660px) 68.75vw,(max-width: 800px) 83.333333333333vw,960px" /></noscript></a></p>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="post_bottom media">
+		</div>                                                                            </div>
+                </div></div>                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">                                        <div class="sidebar-area default_widgets">
+                            <aside id="search-3" class="widget widget_search"><h5 class="widget_title">Search</h5><form method="get" class="search-form" action="https://cecieee.org/">
+	<input type="search" class="form-control" placeholder="Search..." value="" name="s" />
+	<button type="submit"><i class="fa fa-search"></i></button>
+</form></aside><aside id="categories-3" class="widget widget_categories"><h5 class="widget_title">Categories</h5>		<ul>
+				<li class="cat-item cat-item-248"><a href="https://cecieee.org/category/cs/" >Computer Society</a>
+</li>
+	<li class="cat-item cat-item-169"><a href="https://cecieee.org/category/news/" >News</a>
+</li>
+	<li class="cat-item cat-item-247"><a href="https://cecieee.org/category/pes/" >Power and Energy Society</a>
+</li>
+		</ul>
+			</aside>                        </div>
+                                    </div></div>            			</div>
+</article> <!-- #post-## -->
+</div>
+
+	</div> <!--.container-->
+	</div> <!--#main-->
+	</div> <!--.content_wrapper-->
+	    	<footer id="footer" class="footer style_2 no-copyright">
+		
+				<div class="widgets_row">
+			<div class="container">
+				<div class="footer_widgets">
+					<div class="row">
+													<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+								                                                                                                                        <div class="footer_logo">
+                                                <a href="https://cecieee.org/">
+                                                    <img src="https://cecieee.org/wp-content/uploads/2017/10/IEEE-SB-logo-white-web.png" alt="IEEE CEC" />
+                                                </a>
+                                            </div>
+                                        																												<div class="footer_text">
+											<p>IEEE Student Branch Chengannur College of Engineering was established in mid-1997. Since it’s inception, the Student Branch has always worked towards connecting it’s members with advancing technology so as to create bright leaders for the future.</p>
+										</div>
+																																									</div>
+													<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+																		<section id="recent-posts-3" class="widget widget_recent_entries">		<h4 class="widget_title no_stripe">Recent News</h4>		<ul>
+											<li>
+					<a href="https://cecieee.org/outstanding-cs-sc-2018/">Outstanding CS Sutdent Chapter 2018 (Global)</a>
+											<span class="post-date">March 1, 2019</span>
+									</li>
+											<li>
+					<a href="https://cecieee.org/best-cs-sb-chair-award/">Best CS SB Chair Award</a>
+											<span class="post-date">February 18, 2019</span>
+									</li>
+					</ul>
+		</section>							</div>
+													<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+																<section id="custom_html-2" class="widget_text widget widget_custom_html"><h4 class="widget_title no_stripe">Follow Us</h4><div class="textwidget custom-html-widget"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FIEEECEC%2F&tabs&width=255&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="255" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div></section>							</div>
+													<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+																<section id="text-6" class="widget widget_text"><h4 class="widget_title no_stripe">Contact Us</h4>			<div class="textwidget"><address>IEEE Student Branch,<br />
+College of Engineering, Chengannur<br />
+Alapuzha, Kerala<br />
+Pin:689121<br />
+Email: chairman_ieee@ceconline.edu</address>
+</div>
+		</section><section id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3937.172877808741!2d76.61561571536534!3d9.317945393320771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0622ea027eb08f%3A0x41105b207db821c6!2sCollege+of+Engineering+Chengannur+-+CEC!5e0!3m2!1sen!2sin!4v1509428986459" width="250" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></div></section>							</div>
+											</div>
+				</div>
+			</div>
+		</div>
+	
+			<div class="copyright_row">
+			<div class="container">
+				<div class="copyright_row_wr">
+																<div class="copyright">
+							Copyright © 2015-19 IEEE Student Branch CEC							<p>Made with <span style='color:red;'>&hearts;</span> by Devcom.</p>
+						</div>
+									</div>
+			</div>
+		</div>
+		</footer>
+    	</div> <!--#wrapper-->
+
+<style type="text/css">
+    #wpfront-notification-bar 
+    {
+        background: #00629b;
+        background: -moz-linear-gradient(top, #00629b 0%, #00629b 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00629b), color-stop(100%,#00629b));
+        background: -webkit-linear-gradient(top, #00629b 0%,#00629b 100%);
+        background: -o-linear-gradient(top, #00629b 0%,#00629b 100%);
+        background: -ms-linear-gradient(top, #00629b 0%,#00629b 100%);
+        background: linear-gradient(to bottom, #00629b 0%, #00629b 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00629b', endColorstr='#00629b',GradientType=0 );
+    }
+
+    #wpfront-notification-bar div.wpfront-message
+    {
+        color: #ffffff;
+    }
+
+    #wpfront-notification-bar a.wpfront-button
+    {
+        background: #00b7ea;
+        background: -moz-linear-gradient(top, #00b7ea 0%, #009ec3 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(100%,#009ec3));
+        background: -webkit-linear-gradient(top, #00b7ea 0%,#009ec3 100%);
+        background: -o-linear-gradient(top, #00b7ea 0%,#009ec3 100%);
+        background: -ms-linear-gradient(top, #00b7ea 0%,#009ec3 100%);
+        background: linear-gradient(to bottom, #00b7ea 0%, #009ec3 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 );
+
+        color: #ffffff;
+    }
+
+    #wpfront-notification-bar-open-button
+    {
+        background-color: #00b7ea;
+    }
+
+    #wpfront-notification-bar  div.wpfront-close 
+    {
+        border: 1px solid #555555;
+        background-color: #555555;
+        color: #000000;
+    }
+
+    #wpfront-notification-bar  div.wpfront-close:hover 
+    {
+        border: 1px solid #aaaaaa;
+        background-color: #aaaaaa;
+    }
+</style>
+
+
+<div id="wpfront-notification-bar-spacer"  style="display: none;">
+    <div id="wpfront-notification-bar-open-button" class="top wpfront-bottom-shadow"></div>
+    <div id="wpfront-notification-bar" class="wpfront-fixed ">
+                <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td>
+                    <div class="wpfront-message">
+                        
+
+<a href="https://www.ieee.org" target="_blank">IEEE.org</a>|
+<a href="http://ieeexplore.ieee.org/Xplore/home.jsp"target="_blank">IEEE Xplore Digital Library</a>|
+<a href="http://standards.ieee.org/"target="_blank">IEEE Standards</a>|
+<a href="https://spectrum.ieee.org/"target="_blank">IEEE Spectrum</a>|
+<a href="https://ieeekerala.org/"target="_blank">IEEE Kerala Section</a>|
+<a href="http://www.ieeer10.org/"target="_blank">IEEE Region 10</a>|
+<a href="https://www.ieee.org/sitemap.html"target="_blank">More Sites</a>                    </div>
+                    <div>
+                                            </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<style type="text/css">
+.wpfront-message a {
+    color: white;
+    padding: 10px;
+}
+#wpfront-notification-bar  table, #wpfront-notification-bar  tbody, #wpfront-notification-bar  tr{
+ margin-left:20px!important;
+}
+/*
+@media only screen and (max-width: 500px) {
+    #wpfront-notification-bar-spacer {
+        display: none!important;
+    }
+}*/</style>
+<script type="text/javascript">if(typeof wpfront_notification_bar == "function") wpfront_notification_bar({"position":1,"height":40,"fixed_position":false,"animate_delay":0.5,"close_button":false,"button_action_close_bar":false,"auto_close_after":0,"display_after":1,"is_admin_bar_showing":false,"display_open_button":false,"keep_closed":false,"keep_closed_for":0,"position_offset":0,"display_scroll":false,"display_scroll_offset":100});</script><script type='text/javascript' src='https://cecieee.org/wp-content/cache/busting/1/wp-content-plugins-wpfront-notification-bar-jquery-plugins-jquery.c-1.4.0.js'></script>
+<script type='text/javascript' src='https://cecieee.org/wp-content/cache/busting/1/wp-content-themes-consulting-assets-js-bootstrap.min-3.7.9.js'></script>
+<script type='text/javascript' src='https://cecieee.org/wp-content/cache/busting/1/wp-content-themes-consulting-assets-js-select2.min-3.7.9.js'></script>
+<script type='text/javascript' src='https://cecieee.org/wp-content/cache/busting/1/wp-content-themes-consulting-assets-js-custom-3.7.9.js'></script>
+</body>
+</html>
